@@ -27,5 +27,9 @@ head(cep)
 
 
 sqldf("select * from cep where cep LIKE 29165827")
-sqldf("select * from cep where logradouro LIKE 'av%Penha%'")
+nome <- "'%marataízes%'"
+texto <- "select * from cep where logradouro LIKE"
+string <- paste(texto,tolower(nome))
+sqldf(string)
 
+sqldf("select * from cep where logradouro LIKE '%MÁRIO BATALHA%'")
